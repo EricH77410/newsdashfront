@@ -1,0 +1,6 @@
+/* Carte petites annonces */
+
+.annonce .card {
+    width: 18rem;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, .3);
+}
