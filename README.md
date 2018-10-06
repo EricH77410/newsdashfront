@@ -1,4 +1,4 @@
-# ReduxSimpleStarter
+# NewsDashboard
 
 Projet front-end pour le serveur Webscrapp
 

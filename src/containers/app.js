@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import {fetchAf, fetchDl} from '../actions'
 
 // Components
 import Header from '../components/header';
@@ -9,24 +7,6 @@ import AnnonceList from './annoncesList';
 import Footer from '../components/footer';
 
 class App extends Component {
-
-  componentWillMount(){
-    this.props.getAf()
-  }
-
-  renderAnnonces = () => {
-    if (this.props.af.length > 0) {
-      console.log('render...',this.props.af)
-    }    
-  }
-
-  renderNews = () => {
-
-  }
-
-  renderDl = () => {
-    
-  }
 
   render() {
     return (
@@ -44,15 +24,5 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return { af: state.af, dl: state.dl }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getAf: ()=>dispatch(fetchAf()),
-    getDl: ()=>dispatch(fetchDl())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default App

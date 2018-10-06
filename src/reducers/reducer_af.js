@@ -1,10 +1,14 @@
-import { FETCH_AF } from '../actions/index'
+import { FETCH_AF_NEWS, FETCH_AF_ANNONCES } from '../actions/index'
 
 export default function(state = [], action){
   switch (action.type) {
-    case FETCH_AF:
+    case FETCH_AF_NEWS:
 
-      return [action.payload, ...state];
+      return {news: action.payload, ...state};
+    
+    case FETCH_AF_ANNONCES: {
+      return {annonces: action.payload, ...state};
+    }
 
       default:
         return state;
