@@ -19,9 +19,11 @@ class AnnonceList extends React.Component {
 
     render() {
         return (
-            <div className="annonces-list">
-                <h3>Annonces Audiofanzine</h3>                
-                {this.props.annonces ? this.renderAnnonces():''}
+            <div>
+                <h3 className="main-title">Annonces Audiofanzine</h3> 
+                <div className="annonces-list">
+                    {this.props.annonces ? this.renderAnnonces():''}
+                </div>
             </div>
         )
     }

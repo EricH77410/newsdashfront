@@ -2,6 +2,8 @@ import React from 'react';
 import  { connect } from 'react-redux';
 import { fetchAfNews } from '../actions/index'
 
+import News from '../components/genericNews'
+
 class NewsList extends React.Component {
     componentWillMount(){
         this.props.getNews();
@@ -9,16 +11,19 @@ class NewsList extends React.Component {
 
     renderNews = () => {
         const list = this.props.news.map( (news, index) => {
-            console.log(index,news.title);
+            return <News data={news} key={index}/>
         })
         return list
     }
     render() {
         return (
-            <div className="news-list">
-                <h3>NewsList Here</h3>
-                { this.props.news ? this.renderNews() : '' }
+            <div>
+                <h3 className="main-title">NewsList Here</h3>
+                <div className="news-list">               
+                    { this.props.news ? this.renderNews() : '' }
+                </div>
             </div>
+            
         )
     }
 

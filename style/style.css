@@ -1,6 +1,103 @@
+.main-title {
+    text-align: center;
+}
+
+
+/* Card News */
+
+.news-list {
+    display: flex;
+    flex-flow: wrap
+}
+
+.news-list .card {
+    width: 15rem;
+}
+
+
 /* Carte petites annonces */
 
+.annonces-list {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.annonce {
+    width: 100%;
+}
+
 .annonce .card {
-    width: 18rem;
     box-shadow: 2px 5px 15px rgba(0, 0, 0, .3);
+    margin-right: 10px;
+    position: relative;
+}
+
+.annonce img {
+    width: 60px;
+    height: 44px;
+    margin-top: 10px;
+}
+
+.annonce .card-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.annonce .card-text {
+    font-size: 0.8rem;
+}
+
+.annonce .card .card-price {
+    color: #c60000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+
+/* Films DDL */
+
+.film .card {
+    width: 12rem;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, .3);
+}
+
+.films-list {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.film {
+    margin-right: 10px;
+}
+
+.film .card {
+    height: 428px;
+}
+
+
+/*  Genric news display */
+
+.generic-news {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, .3);
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.generic-news img {
+    width: 110px;
+    height: 80px;
+    float: left;
+    margin-right: 5px;
+}
+
+.generic-news h3 {
+    font-size: 1.2rem;
+}
+
+.generic-news p {
+    font-size: 0.8rem;
 }
